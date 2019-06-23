@@ -12,11 +12,17 @@
 
     <Company>Josef Pirkl</Company>
 
-    <Version>1.1.0</Version>
+    <Version>1.1.4</Version>
 
     <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
 
     <PackageId>pi.science.api.test</PackageId>
+
+    <Description>TEST classes for PI Science API.</Description>
+
+    <PackageProjectUrl>http://www.josefpirkl.com/pi_science_api.php</PackageProjectUrl>
+
+    <Copyright>C) Josef Pirkl</Copyright>
   </PropertyGroup>
 
   <ItemGroup>

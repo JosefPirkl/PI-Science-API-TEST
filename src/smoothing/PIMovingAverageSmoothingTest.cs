@@ -23,7 +23,7 @@ namespace pi.science.smoothing.test {
        *  
        */
 
-      PIDebug.TitleBig( "Moving average - SIMPLE CENTERED" );
+      PIDebug.TitleBig( "Moving average - SIMPLE CENTERED (4)" );
 
       /* - prepare variable for source data */
 
@@ -50,15 +50,20 @@ namespace pi.science.smoothing.test {
       /* 
        * SIMPLE MOVING AVERAGE.
        * 
-       * Source 4j.
+       * Source 4P - correction 1.1.4.
        *  
        */
 
-      PIDebug.TitleBig( "Moving average - SIMPLE", true );
+      PIDebug.TitleBig( "Moving average - SIMPLE (3)", true );
 
       /* - calc SIMPLE moving average, length = 3 */
 
-      PIMovingAverageSmoothing MA1 = new PIMovingAverageSmoothing( var );
+      PIVariable var1 = new PIVariable();
+      Assert.IsNotNull( var1 );
+
+      var1.AddValues( new int[] { 3, 5, 9, 20, 12, 17, 22, 23, 51, 41, 56, 75, 60, 75, 88 } );
+
+      PIMovingAverageSmoothing MA1 = new PIMovingAverageSmoothing( var1 );
       MA1.SetCalculationType( CalculationType.SIMPLE );
       MA1.SetWindowLength( 3 );
       MA1.Calc();
@@ -67,11 +72,12 @@ namespace pi.science.smoothing.test {
 
       Console.WriteLine( MA1.GetOutputVariable().AsString( 2 ) );
 
-      Assert.AreEqual( 8.67, (double)MA1.GetOutputVariable().GetValue( 2 ), 0.01 );
-      Assert.AreEqual( 9.67, (double)MA1.GetOutputVariable().GetValue( 3 ), 0.01 );
-      Assert.AreEqual( 10.0, (double)MA1.GetOutputVariable().GetValue( 4 ) );
-      Assert.AreEqual( 11.0, (double)MA1.GetOutputVariable().GetValue( 5 ) );
-      Assert.AreEqual( 10.67, (double)MA1.GetOutputVariable().GetValue( 6 ), 0.01 );
+      Console.WriteLine( "MAE = " + MA1.GetMAE() );
+      Console.WriteLine( "MSE = " + MA1.GetMSE() );
+    
+      Assert.AreEqual( 5.67, (double)MA1.GetOutputVariable().GetValue( 3 ), 0.01 );
+      Assert.AreEqual( 11.33, (double)MA1.GetOutputVariable().GetValue( 4 ), 0.01 );
+      Assert.AreEqual( 13.67, (double)MA1.GetOutputVariable().GetValue( 5 ), 0.01 );      
 
     }
   }

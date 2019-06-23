@@ -171,13 +171,13 @@ namespace pi.science.distribution.test {
 
       distribution.SetDF( 1 );
 
-      Console.WriteLine( "x=-7.0 : " + distribution.CalcProbabilityDensity( -7.0 ) );
-      Console.WriteLine( "x=-2.0 : " + distribution.CalcProbabilityDensity( -2.0 ) );
-      Console.WriteLine( "x=-0.5 : " + distribution.CalcProbabilityDensity( -0.5 ) );
-      Console.WriteLine( "x=0.0 : " + distribution.CalcProbabilityDensity( 0.0 ) );
-      Console.WriteLine( "x=0.5 : " + distribution.CalcProbabilityDensity( 0.5 ) );
-      Console.WriteLine( "x=2.0 : " + distribution.CalcProbabilityDensity( 2.0 ) );
-      Console.WriteLine( "x=7.0 : " + distribution.CalcProbabilityDensity( 7.0 ) );
+      Console.WriteLine( "x=-7.0 : " + distribution.GetPDF( -7.0 ) );
+      Console.WriteLine( "x=-2.0 : " + distribution.GetPDF( -2.0 ) );
+      Console.WriteLine( "x=-0.5 : " + distribution.GetPDF( -0.5 ) );
+      Console.WriteLine( "x=0.0 : " + distribution.GetPDF( 0.0 ) );
+      Console.WriteLine( "x=0.5 : " + distribution.GetPDF( 0.5 ) );
+      Console.WriteLine( "x=2.0 : " + distribution.GetPDF( 2.0 ) );
+      Console.WriteLine( "x=7.0 : " + distribution.GetPDF( 7.0 ) );
 
     }
 

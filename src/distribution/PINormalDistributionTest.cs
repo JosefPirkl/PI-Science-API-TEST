@@ -69,9 +69,9 @@ namespace pi.science.distribution.test {
 
       /* -- compute curve value in point X */
 
-      Console.WriteLine( "Probability density, x=-3 = " + distribution.CalcProbabilityDensity( -3 ) );
-      Console.WriteLine( "Probability density, x=0 = " + distribution.CalcProbabilityDensity( 0 ) );
-      Console.WriteLine( "Probability density, x=3 = " + distribution.CalcProbabilityDensity( 3 ) );
+      Console.WriteLine( "Probability density, x=-3 = " + distribution.GetPDF( -3 ) );
+      Console.WriteLine( "Probability density, x=0 = " + distribution.GetPDF( 0 ) );
+      Console.WriteLine( "Probability density, x=3 = " + distribution.GetPDF( 3 ) );
 
     }
   }

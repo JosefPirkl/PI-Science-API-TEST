@@ -85,10 +85,10 @@ namespace pi.science.distribution.test {
 
       distribution.SetSD( 1 );
 
-      Console.WriteLine( "x=0.1 : " + distribution.CalcProbabilityDensity( 0.1 ) );
-      Console.WriteLine( "x=0.5 : " + distribution.CalcProbabilityDensity( 0.5 ) );
-      Console.WriteLine( "x=1.0 : " + distribution.CalcProbabilityDensity( 1.0 ) );
-      Console.WriteLine( "x=2.0 : " + distribution.CalcProbabilityDensity( 2.0 ) );
+      Console.WriteLine( "x=0.1 : " + distribution.GetPDF( 0.1 ) );
+      Console.WriteLine( "x=0.5 : " + distribution.GetPDF( 0.5 ) );
+      Console.WriteLine( "x=1.0 : " + distribution.GetPDF( 1.0 ) );
+      Console.WriteLine( "x=2.0 : " + distribution.GetPDF( 2.0 ) );
 
     }
   }
