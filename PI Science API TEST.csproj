@@ -35,4 +35,8 @@
     <ProjectReference Include="..\PI Science API\PI Science API.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="src\ai\" />
+  </ItemGroup>
+
 </Project>
